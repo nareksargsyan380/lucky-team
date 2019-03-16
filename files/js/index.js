@@ -186,8 +186,6 @@ $(document).ready(function () {
         });
     };
     //PopUp на заказы
-
-
                           $(document).ready(function(){
                               PopUpHide()
                           });
@@ -199,13 +197,12 @@ $(document).ready(function () {
                           function PopUpHide(){
                               $("#openModal").hide();
                           }
-                          $(document).mouseleave(function () {
-                              PopUpShow()
-                          });
-                          $(document).mouseenter(function () {
-                              PopUpHide()
-                          });
-
+                         $(document).mouseleave(function () {
+                             PopUpShow()
+                         });
+                         $(document).mouseenter(function () {
+                             PopUpHide()
+                         });
 
     //Функция проверки ввода кода функцый
     function codeCheck() {
