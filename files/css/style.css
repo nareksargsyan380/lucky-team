@@ -196,7 +196,7 @@ header{
 }
 .section1-left .do:before{
     content: " ";
-    background: url(../img/sprite.png) no-repeat -15px -86px;
+    background: url(../img/sprite.png) no-repeat -16px -86px;
     width: 46px;
     height: 46px;
     position: absolute;
@@ -550,7 +550,7 @@ select{
 .complications-text{
     font-size: 24px;
     line-height: 26px;
-    background: url(../img/sprite.png) no-repeat -934px -79px;
+    background: url(../img/sprite.png) no-repeat -934px -78px;
     padding: 15px 0 30px 60px;
     min-height: 36px;
 }
@@ -756,7 +756,7 @@ select{
     margin-bottom: 50px;
 }
 .additional__item{
-    background: url(../img/sprite.png) no-repeat -392px -64px;
+    background: url(../img/sprite.png) no-repeat -391px -64px;
     padding-top: 73px;
     display: inline-block;
     text-align: center;
