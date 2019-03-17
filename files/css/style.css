@@ -2058,13 +2058,13 @@ select{
     }
 
     .slide-img--1{
-        background: url("http://demo.localtime-idea.com/demo_landings/dianot/dianot_ld6/img/slide-img1-480.png") no-repeat center top;
+        /*background: url("http://demo.localtime-idea.com/demo_landings/dianot/dianot_ld6/img/slide-img1-480.png") no-repeat center top;*/
     }
     .slide-img--2{
-        background: url("http://demo.localtime-idea.com/demo_landings/dianot/dianot_ld6/img/slide-img2-480.png") no-repeat center top;
+        /*background: url("http://demo.localtime-idea.com/demo_landings/dianot/dianot_ld6/img/slide-img2-480.png") no-repeat center top;*/
     }
     .slide-img--3{
-        background: url("http://demo.localtime-idea.com/demo_landings/dianot/dianot_ld6/img/slide-img3-480.png") no-repeat center top;
+        /*background: url("http://demo.localtime-idea.com/demo_landings/dianot/dianot_ld6/img/slide-img3-480.png") no-repeat center top;*/
     }
     .text-wrap-slide {
         padding: 41px 10px 40px;
@@ -2232,7 +2232,7 @@ select{
 
 @media screen and (max-width: 486px) {
     .section2 {
-        background: url("http://demo.localtime-idea.com/demo_landings/dianot/dianot_ld6/img/bg-sect2-480.jpg") no-repeat center 330px;
+        /*background: url("http://demo.localtime-idea.com/demo_landings/dianot/dianot_ld6/img/bg-sect2-480.jpg") no-repeat center 330px;*/d
     }
     .section4 {
         background-size: 480px;
@@ -3127,6 +3127,7 @@ content: " ";
     background: url(../img/img_close-conf.png) no-repeat
 }
 .modalDialog {
+    display: block;
     position: fixed;
     font-family: Arial, Helvetica, sans-serif;
     top: 0;
@@ -3186,7 +3187,9 @@ content: " ";
   font-size: 22px;
 }
 .modal-a{
-  display: none;
+  font-size: 10px;
+  color: grey;
+  text-decoration: none;
 }
 
 

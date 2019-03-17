@@ -190,19 +190,34 @@ $(document).ready(function () {
                               PopUpHide()
                           });
 
+                          var tryOneTime = true;
+
                           function PopUpShow(){
-                              $("#openModal").show();
+                            tryOneTime && $(".modalDialog").css("opacity",1);
                           }
 
                           function PopUpHide(){
-                              $("#openModal").hide();
+                              $(".modalDialog").css("opacity",0);
                           }
                          $(document).mouseleave(function () {
-                             PopUpShow()
+
+                            PopUpShow();
+                            tryOneTime = false;
                          });
                          $(document).mouseenter(function () {
+                           console.log(12313);
                              PopUpHide()
                          });
+
+                         //Checking Callback parameter
+
+                         var parsedUrl = new URL(window.location.href);
+                         var callBackValue = parsedUrl.searchParams.get("callback");
+
+                         if(callBackValue){
+                           alert(callBackValue)
+                         }
+
 
     //Функция проверки ввода кода функцый
     function codeCheck() {
@@ -326,4 +341,7 @@ $(document).ready(function () {
     };
     check();
     // document ready конец
+
+
+
 });
