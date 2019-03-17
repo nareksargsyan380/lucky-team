@@ -87,7 +87,7 @@
 
                                     <div class="c-s"><input type="hidden" name="country_code" value="RU"></div>
                                     <input class="input-form" type="text" name="name" placeholder="Ваше имя" >
-                                    <input class="input-form" type="text" name="phone" placeholder="Ваш номер телефона" >
+                                    <input id="phone" class="input-form"  type="text" name="phone" placeholder="Ваш номер телефона" >
                                     <button class="submit-form" type="submit">Получить<br>Диалайн</button>
 
                                 </form>
@@ -339,7 +339,7 @@
 
                                     <div class="c-s"><input type="hidden" name="country_code" value="RU"></div>
                                     <input class="input-form input-form--all" type="text" name="name" placeholder="Ваше имя" >
-                                    <input class="input-form input-form--all" type="text" name="phone" placeholder="Ваш номер телефона" >
+                                    <input id="phone1" class="input-form input-form--all"  type="text" name="phone" placeholder="Ваш номер телефона" >
                                     <button class="submit-form submit-form--all" type="submit">Получить
                                         <br>Диалайн</button>
 
@@ -463,7 +463,7 @@
 
                                     <div class="c-s"><input type="hidden" name="country_code" value="RU"></div>
                                     <input class="input-form input-form--all" type="text" name="name" placeholder="Ваше имя" >
-                                    <input class="input-form input-form--all" type="text" name="phone" placeholder="Ваш номер телефона" >
+                                    <input id="phone" class="input-form input-form--all"  type="text" name="phone" placeholder="Ваш номер телефона" >
                                     <button class="submit-form submit-form--all" type="submit">Получить
                                         <br>Диалайн</button>
 
@@ -550,7 +550,7 @@
 
                                     <div class="c-s"><input type="hidden" name="country_code" value="RU"></div>
                                     <input class="input-form input-form--all" type="text" name="name" placeholder="Ваше имя" >
-                                    <input class="input-form input-form--all" type="text" name="phone" placeholder="Ваш номер телефона" >
+                                    <input id="phone" class="input-form input-form--all"  type="text" name="phone" placeholder="Ваш номер телефона" >
                                     <button class="submit-form submit-form--all" type="submit">Получить
                                         <br>Диалайн</button>
 
@@ -611,7 +611,7 @@
 
                                     <div class="c-s"><input type="hidden" name="country_code" value="RU"></div>
                                     <input class="input-form input-form--all" type="text" name="name" placeholder="Ваше имя" >
-                                    <input class="input-form input-form--all" type="text" name="phone" placeholder="Ваш номер телефона" >
+                                    <input id="phone" class="input-form input-form--all"  type="text" name="phone" placeholder="Ваш номер телефона" >
                                     <button class="submit-form submit-form--all" type="submit">Получить
                                         <br>Диалайн</button>
 
@@ -670,7 +670,7 @@
 
                                     <div class="c-s"><input type="hidden" name="country_code" value="RU"></div>
                                     <input class="input-form input-form--all" type="text" name="name" placeholder="Ваше имя" >
-                                    <input class="input-form input-form--all" type="text" name="phone" placeholder="Ваш номер телефона" >
+                                    <input id="phone" class="input-form input-form--all"  type="text" name="phone" placeholder="Ваш номер телефона" >
                                     <button class="submit-form submit-form--all" type="submit">Получить
                                         <br>Диалайн</button>
 
@@ -1736,8 +1736,14 @@
 
     });
     </script>
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-     <script type='text/javascript' src='http://www.rocketprofit.ru/getlandingscript.php?site_id=1'></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <!-- <script type='text/javascript' src='http://www.rocketprofit.ru/getlandingscript.php?site_id=1'></script> -->
+    <script src="./digitalBush-jquery.maskedinput-9672630/src/jquery.maskedinput.js"></script>
+    <script>
+    $(document).ready(function() {
+    $("#phone, #phone1").mask("+30 (999) 999999");
+  });
+</script>
       <script>
      		function rp_form_gap(){
      			var forms = window.document.getElementsByTagName("form");
