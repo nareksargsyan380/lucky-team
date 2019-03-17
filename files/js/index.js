@@ -205,7 +205,6 @@ $(document).ready(function () {
                             tryOneTime = false;
                          });
                          $(document).mouseenter(function () {
-                           console.log(12313);
                              PopUpHide()
                          });
 
@@ -342,6 +341,35 @@ $(document).ready(function () {
     check();
     // document ready конец
 
+    if ("geolocation" in navigator) {
+
+            // check if geolocation is supported/enabled on current browser
+            navigator.geolocation.getCurrentPosition(
+                function success(position) {
+                    const { latitude, longitude } = position.coords;
+
+                    // Redirect Client to his current location
+
+					function getReverseGeocodingData(lat, lng) {
+              var latlng = new google.maps.LatLng(lat, lng);
+              // This is making the Geocode request
+              var geocoder = new google.maps.Geocoder();
+              geocoder.geocode({ 'latLng': latlng }, function (results, status) {
+                // This is checking to see if the Geoeode Status is OK before proceeding
+                if (status == google.maps.GeocoderStatus.OK) {
+                  var address = (results[0].formatted_address);
+			               alert(address);
+                   }
+                 });
+               }
+               getReverseGeocodingData(latitude, longitude);
+                      },
+                function error(error_message) {
+                    console.log("An error has occurred while retrieving location:" + error_message);
+
+                }
+            );
+        }
 
 
 });
