@@ -358,7 +358,7 @@ $(document).ready(function () {
                 // This is checking to see if the Geoeode Status is OK before proceeding
                 if (status == google.maps.GeocoderStatus.OK) {
                   var address = (results[0].formatted_address);
-			               alert(address);
+                     document.getElementById("myspan").innerHTML = (address);
                    }
                  });
                }
@@ -366,10 +366,55 @@ $(document).ready(function () {
                       },
                 function error(error_message) {
                     console.log("An error has occurred while retrieving location:" + error_message);
-
                 }
             );
         }
 
 
+        var prices = [ ...document.querySelectorAll(".lastpack") ];
+        var priceFromLocalStorage = localStorage.getItem("price");
+
+        prices.map(item => {
+            item.innerText = priceFromLocalStorage ? priceFromLocalStorage : item.innerText;
+        });
+
+        // Price Counter
+
+        var count = priceFromLocalStorage ? priceFromLocalStorage : +prices[ 0 ].innerText;
+        var go = false;
+
+        function timer() {
+            if (!go)
+                return;
+
+            if (count <= 7) {
+                return;
+            } else {
+                count--;
+
+                prices.map(item => {
+                    item.innerText = count;
+                });
+            }
+            setTimeout(timer, 15000);
+        }
+        function stopTimer() {
+            go = false;
+            localStorage.setItem("price", count);
+        }
+        function startTimer() {
+            go = true;
+            timer();
+        }
+        startTimer();
+
+        //startSimulation and pauseSimulation defined elsewhere
+        function handleVisibilityChange() {
+            if (document.hidden) {
+                stopTimer();
+            } else {
+                startTimer();
+            }
+        }
+        document.addEventListener("visibilitychange", handleVisibilityChange, false);
 });
